@@ -39,6 +39,29 @@ const siteConfig = {
   ],
 
   themeConfig: {
+    algolia: {
+      // L'ID de l'application fourni par Algolia
+      appId: 'YOUR_APP_ID',
+
+      // Clé d'API publique : il est possible de la committer en toute sécurité
+      apiKey: 'YOUR_SEARCH_API_KEY',
+
+      indexName: 'YOUR_INDEX_NAME',
+
+      // Facultatif : voir la section doc ci-dessous
+      contextualSearch: true,
+
+      // Facultatif : Spécifiez les domaines où la navigation doit se faire par window.location au lieu de history.push. Utile lorsque notre configuration Algolia explore plusieurs sites de documentation et que nous voulons naviguer vers eux avec window.location.href.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Facultatif : paramètres de recherche de Algolia
+      searchParameters: {},
+
+      // Facultatif : chemin pour la page de recherche qui est activée par défaut (`false` pour le désactiver)
+      searchPagePath: false, //'search',
+
+      //... autres paramètres d'Algolia
+    },
     navbar: {
       title: 'Women On Rails',
       logo: {
